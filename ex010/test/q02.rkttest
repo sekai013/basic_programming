@@ -1,0 +1,10 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex010")
+(require "test-module.rkt")
+(require "q02.rkt")
+
+(begin-test
+  "q02"
+  (list
+    (assert (maximum 3 6) 6)
+    (assert (minimum -8 7) -8)))
