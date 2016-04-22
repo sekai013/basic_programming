@@ -1,0 +1,11 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex020")
+(require "test-module.rkt")
+(require "q06.rkt")
+
+(begin-test
+  "q06"
+  (list
+    (assert (prime? 17) #t)
+    (assert (prime? 27) #f)
+    (assert (prime? 37) #t)))
