@@ -8,4 +8,4 @@
   (list
     (assert (fpow 2 10) 1024)
     (assert (fpow 1 50) 1)
-    (assert (fpow 7 4) 4901)))
+    (assert (fpow 7 4) 2401)))
