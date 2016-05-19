@@ -1,0 +1,10 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex030")
+(require "test-module.rkt")
+(require "q04.rkt")
+
+(begin-test
+  "q04"
+  (list
+    (assert (dbls '(-1 5 23 -7)) '(-2 10 46 -14))
+    (assert (dbls (list 1 2 3)) (list 2 4 6))))

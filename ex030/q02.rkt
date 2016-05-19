@@ -1,0 +1,3 @@
+(define (t1 n) (cons n (cons (* 2 n) (cons (* 3 n) '()))))
+(define (t2 n) (list 1 n (* n n)))
+(define (t3 n) (list (- n 1) n (+ n 1)))
