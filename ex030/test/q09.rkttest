@@ -1,0 +1,9 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex030")
+(require "test-module.rkt")
+(require "q09.rkt")
+
+(begin-test
+  "q09"
+  (list
+    (assert (primes 12) '(2 3 5 7 11))))
