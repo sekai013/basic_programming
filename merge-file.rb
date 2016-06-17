@@ -8,6 +8,7 @@ class MergeFiles
   end
 
   def parse_file(file_path)
+    return if /practice/.match(file_path)
     puts "Parsing #{file_path}"
     File.open(file_path) do |file|
       depth = 0
@@ -15,7 +16,7 @@ class MergeFiles
         if /^\(require/.match(line)
           next
         elsif /^\(define/.match(line)
-          name = /^\(define ([\w\-_]+)/.match(line)[1]
+          name = /^\(define ([\w\-_()]+)/.match(line)[1]
           next if @env[name.to_sym]
           @env[name.to_sym] = true
           depth = line.count('(') - line.count(')')

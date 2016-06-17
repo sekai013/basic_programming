@@ -1,0 +1,12 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex050")
+(require "test-module.rkt")
+(require "q01.rkt")
+
+(begin-test
+  "q01"
+  (list
+    (assert (CEST->JST 3) 10)
+    (assert (JST->CEST 3) 20)
+    (assert (EST->JST 4) 17)
+    (assert (EST->JST 18) 7)))

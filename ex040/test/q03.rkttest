@@ -1,0 +1,10 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex040")
+(require "test-module.rkt")
+(require "q03.rkt")
+
+(begin-test
+  "q03"
+  (list
+    (assert (tails '(1 2 3 4)) '((1 2 3 4) (2 3 4) (3 4) (4) ()))
+    (assert (tails '(a b a a)) '((a b a a) (b a a) (a a) (a) ()))))

@@ -1,0 +1,17 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex060")
+(require "test-module.rkt")
+(require "q03.rkt")
+
+(define x (make-polar 1.0 2.0))
+(define y (make-polar 3.0 4.0))
+
+(begin-test
+  "q03"
+  (list
+    (assert (polar-add x y) (make-polar 4.0 6.0))
+    (assert (polar-scalar 3 x) (make-polar 3.0 6.0))
+    (assert (polar-sub x y) (make-polar -2.0 -2.0))
+    (assert (polar-norm x) (sqrt 5.0))
+    (assert (polar-ip x y) 11.0)
+    (assert (polar-rot x (/ pi 2.0) (make-polar -2.0 1.0)))))

@@ -1,0 +1,17 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex060")
+(require "test-module.rkt")
+(require "q01.rkt")
+
+(define x (make-vect 1.0 2.0))
+(define y (make-vect 3.0 4.0))
+
+(begin-test
+  "q01"
+  (list
+    (assert (vect-add x y) (make-vect 4.0 6.0))
+    (assert (vect-scalar 3 x) (make-vect 3.0 6.0))
+    (assert (vect-sub x y) (make-vect -2.0 -2.0))
+    (assert (vect-norm x) (sqrt 5.0))
+    (assert (vect-ip x y) 11.0)
+    (assert (vect-rot x (/ pi 2.0) (make-vect -2.0 1.0)))))

@@ -1,0 +1,10 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex050")
+(require "test-module.rkt")
+(require "q03.rkt")
+
+(begin-test
+  "q03"
+  (list
+    (assert (invm 1.0 2.0 3.0 4.0) '(-2.0 1.5 1.0 -0.5))
+    (assert (invm 1.0 1.0 1.0 1.0) #f)))

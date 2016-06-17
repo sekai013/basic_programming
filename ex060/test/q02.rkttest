@@ -1,0 +1,15 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex060")
+(require "test-module.rkt")
+(require "q02.rkt")
+
+(define x (make-polar 1.0 (/ pi 4.0)))
+(define y (make-vect (sqrt 2.0) (sqrt 2.0)))
+
+(begin-test
+  "q02"
+  (list
+    (assert (polar-r x) 1.0)
+    (assert (polar-theta x) (/ pi 4.0))
+    (assert (cartesian->polar y) x)
+    (assert (polar->cartesian x) y)))

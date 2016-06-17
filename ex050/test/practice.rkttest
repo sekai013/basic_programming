@@ -1,0 +1,9 @@
+(add-load-path "/Users/admin/univ/basic_programming/racket-test-modules")
+(add-load-path "/Users/admin/univ/basic_programming/ex050")
+(require "test-module.rkt")
+(require "practice.rkt")
+
+(begin-test
+  "practice"
+  (list
+    (assert (f 7) 23107)))
